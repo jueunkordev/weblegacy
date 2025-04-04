@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS- 중급</title>
+</head>
+<body>
+	<span onclick="product('1','LG 냉장고')">LG-냉장고</span><br>
+	<span  onclick="product('2','LG 에어컨')">LG-에어컨</span>
+	<input type="button" value="스토리지 추가" onclick="abc()">
+
+
+</body>
+<script>
+/*
+Storage 사용법
+localStorage : 해당 도메인 기준으로 메모리에 저장 시키는 방식 (지속적으로 기억을 시킴) (10MB)
+sessionStorage : localStorage 동일한 형태이지만 ,브라우저를 닫을 경우 또는 신규탭으로 출력 시 데이터 손실 (10MB)
+ExtentionStorage : API 데이터를 storage에 저장시켜서 웹페이지에 출력하는 방식 (5MB)
+setItem : 해당 값을 key 이름에 맞춰서 저장을 함
+단, 동일한 key 이름 사용 시 데이터 값이 수정됨
+ */
+	function abc() {
+		localStorage.setItem("mid","hong");
+		sessionStorage.setItem("midx","50");
+	}
+	
+	function product(pidx,pdname) {
+		sessionStorage.setItem("userpd"+pidx,pdname);
+		location.href="./js_middle2.html";
+	}
+</script>
+</html>
