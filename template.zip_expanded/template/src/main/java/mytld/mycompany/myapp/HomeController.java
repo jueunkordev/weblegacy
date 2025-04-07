@@ -19,10 +19,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mysql.cj.xdevapi.PreparableStatement;
 
+import api.api_controller;
 
 @Controller
 public class HomeController {
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	// log로 문제사항 및 실행사항을 체크하는 라이브러리
+	private static final Logger logger = LoggerFactory.getLogger(api_controller.class);
 	
 	@Autowired
 	BasicDataSource dbinfo;

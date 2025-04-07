@@ -26,7 +26,6 @@
 			<version>8.5.61</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<!-- mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -53,19 +52,19 @@
 			<version>1.18.36</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- dbcp -->
 		<dependency>
-		    <groupId>commons-dbcp</groupId>
-		    <artifactId>commons-dbcp</artifactId>
-		    <version>1.4</version>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
 		</dependency>
-		
+
 		<!-- mail -->
 		<dependency>
-		    <groupId>javax.activation</groupId>
-		    <artifactId>activation</artifactId>
-		    <version>1.1.1</version>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 
 		<!-- 파일 첨부 -->
@@ -74,33 +73,33 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.5</version>
 		</dependency>
-		
+
 		<!-- mysql -->
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.33</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
 		</dependency>
-		
+
 		<!-- Oracle (JDK11) -->
 		<dependency>
-		    <groupId>com.oracle.database.jdbc</groupId>
-		    <artifactId>ojdbc8</artifactId>
-		    <version>23.7.0.25.01</version>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>23.7.0.25.01</version>
 		</dependency>
-		
+
 		<!-- mail -->
 		<dependency>
-		    <groupId>javax.mail</groupId>
-		    <artifactId>javax.mail-api</artifactId>
-		    <version>1.6.2</version>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+			<version>1.6.2</version>
 		</dependency>
-		
+
 		<!-- mail -->
 		<dependency>
-		    <groupId>javax.mail</groupId>
-		    <artifactId>mail</artifactId>
-		    <version>1.4.7</version>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
 		</dependency>
 
 		<!-- Spring -->
@@ -146,6 +145,12 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${org.slf4j-version}</version>
 			<scope>runtime</scope>
+		</dependency>
+		<!-- 구현체 (Logback 사용 예시) -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.11</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -222,13 +227,13 @@
 					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.3.2</version>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
