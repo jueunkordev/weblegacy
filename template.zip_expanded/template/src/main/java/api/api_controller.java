@@ -10,7 +10,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class api_controller {
@@ -27,9 +29,25 @@ public class api_controller {
 		// js - Ajax(GET)
 		PrintWriter pw = null;
 		
+		/*
+		 @RequestHeader : Ajax에서만 사용한느 Headers의 값이며, 키에 맞느 ㄴ데이터를 가져올 수 있음
+		 Front-end : setRequestHeader에 key, value값을 보낼 경우에만 사용함
+		 */
+		@PostMapping("/ajax/ajax3.do")
+		public String ajax3(ServletResponse res, @RequestHeader(name="User") String user) {
+			try {
+				this.logger.info("받은 사용자: " + user);
+				this.pw = res.getWriter();
+				this.pw.write("ok"); // 응답 문자열
+			} catch (Exception e) {
+				this.logger.error(e.toString());
+			}
+			return null;
+		}
+		
 		// Array 형태로 전송 시 GET 형태의 메소드와 동일하게 POST 값을 처리하면 됨
 		@PostMapping("/ajax/ajax2.do")
-		public String ajax2(ServletResponse res,@RequestParam(name="product")String pd[], @RequestParam(name="product")String person) {
+		public String ajax2(ServletResponse res,@RequestParam(name="product")String pd[], @RequestParam(name="person")String person) {
 			try {
 				this.logger.info(person);
 				this.logger.info(pd[0]);
@@ -37,7 +55,7 @@ public class api_controller {
 				this.pw.write("ok");
 				
 			} catch (Exception e) {
-				// TODO: handle exception
+				this.logger.error(e.toString());
 			}
 			return null;
 		}

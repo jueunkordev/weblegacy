@@ -16,5 +16,5 @@
 	2. FormData를 이용하여 데이터 전송
 	3. JSON.Stringify를 이용하여 데이터 전송
 	 -->
-<script src="./ajax3.js?v=2"></script>
+<script src="./ajax3.js?v=6"></script>
 </html>
