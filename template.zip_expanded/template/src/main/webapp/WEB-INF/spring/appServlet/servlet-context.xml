@@ -21,7 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="mytld.mycompany.myapp" />
+	<!-- 새로운 패키지 명 등록 -->
+	<context:component-scan base-package="mytld.mycompany.myapp,api" />
 	
 	
 	

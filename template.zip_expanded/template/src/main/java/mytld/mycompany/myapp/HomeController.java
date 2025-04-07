@@ -23,8 +23,7 @@ import api.api_controller;
 
 @Controller
 public class HomeController {
-	// log로 문제사항 및 실행사항을 체크하는 라이브러리
-	private static final Logger logger = LoggerFactory.getLogger(api_controller.class);
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Autowired
 	BasicDataSource dbinfo;
