@@ -8,7 +8,8 @@
 </head>
 <body>
 
-	<input type="button" value="전송" onclick="ajax_gopage()">
+	<input type="button" value="전송" onclick="ajax_gopage()"><br>
+	<input type="button" value="전송 form 키가 다를 경우" onclick="ajax_gopage2()">
 </body>
 	<!-- 
 	POST 값 전송

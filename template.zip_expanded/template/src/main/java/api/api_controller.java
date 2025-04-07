@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,13 +31,31 @@ public class api_controller {
 		PrintWriter pw = null;
 		
 		/*
-		 @RequestHeader : Ajax에서만 사용한느 Headers의 값이며, 키에 맞느 ㄴ데이터를 가져올 수 있음
+		 @RequestHeader : Ajax에서만 사용한느 Headers의 값이며, 키에 맞는 데이터를 가져올 수 있음
 		 Front-end : setRequestHeader에 key, value값을 보낼 경우에만 사용함
+		 @RequestBody : content-type, application/json 으로 전송했을 경우
 		 */
-		@PostMapping("/ajax/ajax3.do")
-		public String ajax3(ServletResponse res, @RequestHeader(name="User") String user) {
+		@PostMapping("/ajax/ajax4.do")
+		public String ajax4(ServletResponse res,
+							@RequestBody api_dto dto) {
 			try {
-				this.logger.info("받은 사용자: " + user);
+				this.logger.info(dto.getPd1());
+				this.logger.info(dto.getPd2());
+				this.pw = res.getWriter();
+				this.pw.write("ok"); // 응답 문자열
+			} catch (Exception e) {
+				this.logger.error(e.toString());
+			}
+			return null;
+		}
+		
+		@PostMapping("/ajax/ajax3.do")
+		public String ajax3(ServletResponse res,
+							//@RequestHeader(name="User") String user,
+							@RequestBody String pd) {
+			try {
+				this.logger.info(pd);
+				//this.logger.info("받은 사용자: " + user);
 				this.pw = res.getWriter();
 				this.pw.write("ok"); // 응답 문자열
 			} catch (Exception e) {
