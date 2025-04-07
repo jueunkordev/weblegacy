@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ajax (GET)</title>
+<title>Ajax (GET) - 문자열, Array를 이용하여 data 전송</title>
 </head>
 <body>
 	<!-- 
@@ -21,5 +21,5 @@ ajax GET 통신 (선택된 상품만 Back-end 전송)
 1. 같은 이름으로 문자열로 보내면 될까요? => .ajax1.do?product=1,2,3,4,5
 2. 키를 이용하여 배열로 보내면 될까요? => product=['1','2','4']
  -->
-<script src="./ajax1.js?v=1"></script>
+<script src="./ajax1.js?v=2"></script>
 </html>
