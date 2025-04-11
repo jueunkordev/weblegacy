@@ -24,6 +24,11 @@
 	<!-- 새로운 패키지 명 등록 -->
 	<context:component-scan base-package="mytld.mycompany.myapp,api" />
 	
-	
+	 <!-- I/O, Ajax => FormData() 사용이 됨 -->
+   <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+   <beans:property name="defaultEncoding" value="utf-8"/>
+   <beans:property name="maxUploadSize" value="-1"/>
+   <beans:property name="maxInMemorySize" value="200000"/>
+   </beans:bean>
 	
 </beans:beans>

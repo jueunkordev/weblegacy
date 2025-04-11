@@ -1,10 +1,40 @@
 package api;
 
+import org.springframework.stereotype.Repository;
+
 import lombok.Data;
 
 @Data
+@Repository("api_dto")
 public class api_dto {
+	String midx;
 	String pd1,pd2,pd3,pd4,pd5;
+	String mid, mname;
+	public String getMid() {
+		return mid;
+	}
+
+	public void setMid(String mid) {
+		this.mid = mid;
+	}
+
+	public String getMname() {
+		return mname;
+	}
+
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
+
+	public Integer getMage() {
+		return mage;
+	}
+
+	public void setMage(Integer mage) {
+		this.mage = mage;
+	}
+
+	Integer mage;
 
 	public String getPd1() {
 		return pd1;
